@@ -22,6 +22,7 @@ namespace MessengerModel
         public string IPadress {  get; set; }
         [DataMember]
         public byte[]? Avatar { get; set; }
+        public bool Online {  get; set; }
         public User() { }
         public User(string nick, string password, string ipadress, byte[] avatar)
         {
