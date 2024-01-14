@@ -4,17 +4,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Json;
+using System.Runtime.Serialization;
+
 
 namespace MessengerModel
 {
-   public class Message
+    [DataContract]
+    public class Message
     {
         public int Id { get; set; } //not null
+        [DataMember]
         public DateTime Date_Time {  get; set; } //not null
+        [DataMember]
         public int UserSenderId {  get; set; } //not null
+        [DataMember]
         public int UserRecepientId { get; set; } //not null
+        [DataMember]
         public string Mes {  get; set; } //not null
-
+       
+        public Message() { }
         public Message(string mes, DateTime date_Time)
         {
             Mes = mes;
