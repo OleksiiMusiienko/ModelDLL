@@ -13,6 +13,7 @@ namespace MessengerModel
     [DataContract]
    public class User
     {
+        [DataMember]
         public int Id { get; set; }
         [DataMember]
         public string Nick {  get; set; }
