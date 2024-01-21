@@ -22,16 +22,19 @@ namespace MessengerModel
         [DataMember]
         public string IPadress {  get; set; }
         [DataMember]
+        public string Phone { get; set; }
+        [DataMember]
         public byte[]? Avatar { get; set; }
         [DataMember]
         public bool Online {  get; set; }
         public User() { }
-        public User(string nick, string password, string ipadress, byte[] avatar)
+        public User(string nick, string password, string ipadress, byte[] avatar, string phone)
         {
             Nick = nick;
             Password = password;
             IPadress = ipadress;
             Avatar = avatar;
+            Phone=phone;
         }
         public virtual ICollection<Message> Messages { get; set; }
         
