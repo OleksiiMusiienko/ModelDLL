@@ -36,8 +36,9 @@ namespace MessengerModel
 
             public DbSet<User> Users { get; set; }
             public DbSet<Message> Messages { get; set; }
+        public DbSet<Friends> Friends { get; set; }
 
-            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
                 // метод UseLazyLoadingProxies() делает доступной ленивую загрузку.
                 optionsBuilder.UseLazyLoadingProxies();
