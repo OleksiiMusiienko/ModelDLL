@@ -37,7 +37,8 @@ namespace MessengerModel
             Phone=phone;
         }
         public virtual ICollection<Message> Messages { get; set; }
-        
+        public virtual ICollection<Friends> Friends { get; set; }
+
         public override string ToString()
         {
             return Nick;
