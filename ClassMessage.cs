@@ -13,6 +13,7 @@ namespace MessengerModel
     [DataContract]
     public class Message
     {
+        [DataMember]
         public int Id { get; set; } //not null
         [DataMember]
         public DateTime Date_Time {  get; set; } //not null
