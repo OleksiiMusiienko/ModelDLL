@@ -23,12 +23,14 @@ namespace MessengerModel
         public int UserRecepientId { get; set; } //not null
         [DataMember]
         public string Mes {  get; set; } //not null
-       
+        [DataMember]
+        public string? MesAudio { get; set; } 
+
         public Message() { }
         public Message(string mes, DateTime date_Time)
         {
             Mes = mes;
-            Date_Time = DateTime.Now;
+            Date_Time = DateTime.Now;           
         }
         public override string ToString()
         {
