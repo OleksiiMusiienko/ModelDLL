@@ -24,7 +24,7 @@ namespace MessengerModel
         [DataMember]
         public string Mes {  get; set; } //not null
         [DataMember]
-        public string? MesAudio { get; set; } 
+        public byte[]? MesAudio { get; set; } 
 
         public Message() { }
         public Message(string mes, DateTime date_Time)
