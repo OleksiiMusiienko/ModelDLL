@@ -16,7 +16,7 @@ namespace MessengerModel
         [DataMember]
         public int Id { get; set; } //not null
         [DataMember]
-        public string Date_Time {  get; set; } //not null
+        public DateTime Date_Time {  get; set; } //not null
         [DataMember]
         public int UserSenderId {  get; set; } //not null
         [DataMember]
@@ -29,7 +29,7 @@ namespace MessengerModel
         public string? MesAudioUri { get; set; }
 
         public Message() { }
-        public Message(string mes, string date_Time)
+        public Message(string mes, DateTime date_Time)
         {
             Mes = mes;
             Date_Time = date_Time;           
