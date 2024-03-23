@@ -8,9 +8,8 @@ namespace MessengerPigeon
 {
     public class CaesarCipher
     {
-        private string CodeEncode(string text)
+        private string CodeEncode(string text, int k=7)
         {
-            int k = 7;
             const string alfabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ";
             //добавляем в алфавит маленькие буквы
             var fullAlfabet = alfabet + alfabet.ToLower();
@@ -41,6 +40,6 @@ namespace MessengerPigeon
 
         //дешифрование текста
         public string Decrypt(string encryptedMessage)
-            => CodeEncode(encryptedMessage);
+            => CodeEncode(encryptedMessage, -7);
     }
 }
