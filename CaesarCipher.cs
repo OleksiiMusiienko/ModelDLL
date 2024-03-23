@@ -11,7 +11,7 @@ namespace MessengerPigeon
         private string CodeEncode(string text)
         {
             int k = 7;
-            const string alfabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+            const string alfabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ";
             //добавляем в алфавит маленькие буквы
             var fullAlfabet = alfabet + alfabet.ToLower();
             int letterQty = fullAlfabet.Length;
