@@ -16,7 +16,7 @@ namespace MessengerModel
         [DataMember]
         public int Id { get; set; } //not null
         [DataMember]
-        public DateTime Date_Time {  get; set; } //not null
+        public string Date_Time {  get; set; } //not null
         [DataMember]
         public int UserSenderId {  get; set; } //not null
         [DataMember]
@@ -29,10 +29,10 @@ namespace MessengerModel
         public string? MesAudioUri { get; set; }
 
         public Message() { }
-        public Message(string mes, DateTime date_Time)
+        public Message(string mes, string date_Time)
         {
             Mes = mes;
-            Date_Time = DateTime.Now;           
+            Date_Time = date_Time;           
         }
         public override string ToString()
         {
