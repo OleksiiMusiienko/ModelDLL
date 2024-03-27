@@ -41,5 +41,30 @@ namespace MessengerPigeon
         //дешифрование текста
         public string Decrypt(string encryptedMessage)
             => CodeEncode(encryptedMessage, -7);
+
+        public string PasswordCode(string text, int k = 9)
+        {
+            const string alfabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            //добавляем в алфавит маленькие буквы
+            var fullAlfabet = alfabet + alfabet.ToLower();
+            int letterQty = fullAlfabet.Length;
+            string retVal = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                var c = text[i];
+                var index = fullAlfabet.IndexOf(c);
+                if (index < 0)
+                {
+                    //если символ не найден, то добавляем его в неизменном виде
+                    retVal += c.ToString();
+                }
+                else
+                {
+                    var codeIndex = (letterQty + index + k) % letterQty;
+                    retVal += fullAlfabet[codeIndex];
+                }
+            }
+            return retVal;
+        }
     }
 }
